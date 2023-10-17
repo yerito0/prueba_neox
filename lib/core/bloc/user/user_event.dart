@@ -7,8 +7,10 @@ sealed class UserEvent extends Equatable {
   List<Object> get props => [];
 }
 
+//Evento para carga inicial
 class LoadUserEvent extends UserEvent {}
 
+//Evento para seleccionar usuario
 class SelectedUserEvent extends UserEvent {
   final User user;
   const SelectedUserEvent(this.user);
@@ -16,6 +18,7 @@ class SelectedUserEvent extends UserEvent {
   List<Object> get props => [user];
 }
 
+//Evento para eliminar usuario del listado
 class DeleteUserEvent extends UserEvent {
   final User user;
   const DeleteUserEvent(this.user);

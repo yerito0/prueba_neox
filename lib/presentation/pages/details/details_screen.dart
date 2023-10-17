@@ -17,6 +17,7 @@ class DetailsBlocScreen extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
+          //Crea instancia de BLoC e inyección del id de usuario para obtener Publicaciones
           create: (_) => PostBloc()
             ..add(
               LoadUserPostEvent(
@@ -38,6 +39,7 @@ class DetailsBlocScreen extends StatelessWidget {
                 Center(
                   child: BlocBuilder<PostBloc, PostState>(
                       builder: (context, state) {
+                    //Implementa UI de los estados del BLoC
                     if (state is PostInitialState) {
                       return const CircularProgressIndicator();
                     }

@@ -19,9 +19,12 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   UserBloc() : super(UserInitialState()) {
     on<LoadUserEvent>((event, emit) async {
       try {
+        //Obtener listado de usuarios a traves de API
         List<User> users = await _userRepository.getUsers();
+        //Emitir estado Loaded en caso de Success
         emit(UserLoadedState(users));
       } catch (e) {
+        //Emitir estado de error en caso de catch
         emit(UserErrorState(e.toString()));
       }
     });

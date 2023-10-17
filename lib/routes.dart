@@ -7,6 +7,7 @@ import 'package:prueba_neox/presentation/pages/user/user_screen.dart';
 
 import 'core/models/user_model.dart';
 
+//Archivo de Rutas de la aplicación con Go_Router
 final GoRouter router = GoRouter(
   routes: <RouteBase>[
     GoRoute(

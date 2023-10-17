@@ -12,6 +12,7 @@ class UserBlocScreen extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
+          //Crea instancia de UserBloc y se inicializa con evento para cargar listado de usuarios
           create: (_) => UserBloc()..add(LoadUserEvent()),
         ),
       ],
@@ -21,6 +22,7 @@ class UserBlocScreen extends StatelessWidget {
         ),
         body: Center(child: BlocBuilder<UserBloc, UserState>(
           builder: (context, state) {
+            //Implementacion UI de los distintos estados del UserBLoC
             if (state is UserInitialState) {
               return const CircularProgressIndicator();
             }

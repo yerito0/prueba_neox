@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Modifica MaterialApp para utilizarlo con Go_Router
     return MaterialApp.router(
       title: 'Prueba NEOX',
       theme: ThemeData(

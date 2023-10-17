@@ -5,13 +5,16 @@ import '../models/user_model.dart';
 import '../repositories/user_service_repository.dart';
 import 'api.dart';
 
+//Agrega implementación de repository para UserService
 class UserServiceImpl implements UserServiceRepository {
   late API _api;
 
+  //Agrega inyeción de dependencia de clase API
   UserServiceImpl({required API api}) {
     _api = api;
   }
 
+  //Implementa metodo para obtener publicaciones del usuario
   @override
   Future<List<Post>> getPosts({required int id}) async {
     try {
@@ -23,6 +26,7 @@ class UserServiceImpl implements UserServiceRepository {
     }
   }
 
+  //Implementa metodo para obtener listado de usuarios
   @override
   Future<List<User>> getUsers() async {
     try {

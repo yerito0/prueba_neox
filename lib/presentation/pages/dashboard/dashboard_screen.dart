@@ -12,6 +12,7 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            //Botón para ingresar a la solución con BLoC como State Managment
             SizedBox(
               width: wb,
               child: ElevatedButton(
@@ -19,6 +20,7 @@ class DashboardScreen extends StatelessWidget {
                 child: const Text('User con BLoC'),
               ),
             ),
+            //Botón para ingresar a la solución con Provider como State Managment
             SizedBox(
               width: wb,
               child: ElevatedButton(
